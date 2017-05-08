@@ -44,43 +44,19 @@ title: Wako Airbnb
   <h3>Votre prochain voyage</h3>
   <div class="container cards">
     <div class="row">
+      <% data.flats.each do |owner, flat| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card card-paris">
-          <div class="card-category">Paris</div>
+        <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
+          <div class="card-category"><%= flat.city %></div>
           <div class="card-description">
-            <h2>Seb's home</h2>
-            <p>Charming room with patio</p>
+            <h2><%= flat.name %></h2>
+            <p><%= flat.summary %></p>
           </div>
-          <% link_to "#" do %>
-            <%= image_tag "anne.jpg", class: "card-user avatar" %>
-          <% end %>
+          <%= image_tag flat.owner_picture, class:"card-user avatar" %>
+          <%= link_to "#", "flats/#{owner}.html", class: "card-link" %>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card card-brussels">
-          <div class="card-category">Brussels</div>
-          <div class="card-description">
-            <h2>Le Belge</h2>
-            <p>Des frites & de la Leffe</p>
-          </div>
-          <% link_to "#" do %>
-            <%= image_tag "seb.jpg", class: "card-user avatar" %>
-          <% end %>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <div class="card card-london">
-          <div class="card-category">London</div>
-          <div class="card-description">
-            <h2>Peter's home</h2>
-            <p>Pouding & Tea</p>
-          </div>
-          <% link_to "#" do %>
-            <%= image_tag "romain.jpg", class: "card-user avatar" %>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
