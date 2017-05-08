@@ -4,12 +4,12 @@
 <% flat = data.flats[owner] %>
 
 <!-- Inject flat data in template -->
-<div class="banner-city">
-  <<div class="row">
-  <div class="col-xs-12">
-    <%= image_tag flat.banner_city %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= image_tag flat.banner_city, class: "banner-city" %>
+    </div>
   </div>
-</div>
 </div>
 
 <div class="container">
@@ -32,67 +32,67 @@
     </div>
     <div class="col-xs-12 col-md-3 col-md-offset-3">
       <form action="#" >
-        <h4>Book this flat</h3>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="checkin" id="checkin">
-              </div>
-              <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="checkout">
-              </div>
+        <h4>Book this flat</h4>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="text" class="form-control" placeholder="checkin" id="checkin">
+            </div>
+            <div class="col-xs-6">
+              <input type="text" class="form-control" placeholder="checkout">
             </div>
           </div>
-          <div class="form-group">
-            <select name="" id="guests" class="form-control">
-              <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-            </select>
-          </div>
-          <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
-        </form>
-      </div>
+        </div>
+        <div class="form-group">
+          <select name="" id="guests" class="form-control">
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+          </select>
+        </div>
+        <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+      </form>
     </div>
   </div>
+</div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h3>About this flat</h3>
-        <p><%= flat.desc %></p>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>About this flat</h3>
+      <p><%= flat.desc %></p>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-2">
-       <p>The space</p>
-     </div>
-     <div class="col-xs-12 col-sm-4">
-       <p>Guest: <strong><%= flat.guest %></strong></p>
-       <p>Bathroom: <strong><%= flat.bathroom %></strong></p>
-       <p>Bedroom: <strong><%= flat.bedroom %></strong></p>
-       <p>Bed: <strong><%= flat.bed %></strong></p>
-     </div>
-     <div class="col-xs-12 col-sm-4">
-       <p>Bed Type: <strong><%= flat.bed_type %></strong></p>
-       <p>Room Type: <strong><%= flat.room_type %></strong></p>
-       <p>Property Type: <strong><%= flat.property_type %></strong></p>
-       <p>Guest: <strong><%=flat.guest%></strong></p>
-     </div>
-   </div>
-   <div class="row">
+  </div>
+  <div class="row">
     <div class="col-xs-12 col-sm-2">
-     <p>Amenities</p>
-   </div>
-   <div class="col-xs-12 col-sm-4">
-     <p>Wifi: <i class="fa fa-2x fa-wifi" aria-hidden="true"></i></p>
-     <p>Smoke: <strong>No</strong></p>
-     <p>Girlfriend Friendly: <strong><%= flat.bedroom %></strong></p>
-   </div>
-   <div class="col-xs-12 col-sm-4">
-     <p>Pool: <strong><i class="fa fa-2x fa-tint" aria-hidden="true"></i></strong></p>
-     <p>Party: <strong><i class="fa fa-2x fa-glass" aria-hidden="true"></i></strong></p>
-     <p>Parking: <strong><i class="fa fa-2x fa-product-hunt" aria-hidden="true"></i></strong></p>
-   </div>
- </div>
+      <p>The space</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <p>Guest: <strong><%= flat.guest %></strong></p>
+      <p>Bathroom: <strong><%= flat.bathroom %></strong></p>
+      <p>Bedroom: <strong><%= flat.bedroom %></strong></p>
+      <p>Bed: <strong><%= flat.bed %></strong></p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <p>Bed Type: <strong><%= flat.bed_type %></strong></p>
+      <p>Room Type: <strong><%= flat.room_type %></strong></p>
+      <p>Property Type: <strong><%= flat.property_type %></strong></p>
+      <p>Guest: <strong><%=flat.guest%></strong></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-2">
+      <p>Amenities</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <p>Wifi: <i class="fa fa-2x fa-wifi" aria-hidden="true"></i></p>
+      <p>Smoke: <strong>No</strong></p>
+      <p>Girlfriend Friendly: <strong>Yes</strong></p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <p>Pool: <strong><i class="fa fa-2x fa-tint" aria-hidden="true"></i></strong></p>
+      <p>Party: <strong><i class="fa fa-2x fa-glass" aria-hidden="true"></i></strong></p>
+      <p>Parking: <strong><i class="fa fa-2x fa-product-hunt" aria-hidden="true"></i></strong></p>
+    </div>
+  </div>
 </div>
