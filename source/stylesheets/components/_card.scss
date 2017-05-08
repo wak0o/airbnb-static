@@ -40,8 +40,20 @@
   background: black;
   opacity: 0;
 }
-.card-link:hover{
+.card-link:hover {
   opacity: 0.1;
+}
+
+.card-paris {
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), image-url('card-paris.jpg');
+}
+
+.card-london {
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), image-url('card-london.jpeg');
+}
+
+.card-brussels {
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), image-url('card-brussels.jpeg');
 }
 
 .cards {
